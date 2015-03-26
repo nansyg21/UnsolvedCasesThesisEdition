@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<XnaContent>
+
+  <Asset Type="System.String">
+  CREATE DATABASE unsolved_cases_online;
+
+  USE unsolved_cases_online;
+
+  CREATE TABLE users (
+  user_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  username VARCHAR(20) NOT NULL,
+  password VARCHAR(20) NOT NULL,
+  email VARCHAR(30) NOT NULL,
+  created_on DATETIME DEFAULT NULL,
+  last_login DATETIME DEFAULT NULL,
+  case1_save BLOB DEFAULT NULL,
+  case2_save BLOB DEFAULT NULL,
+  PRIMARY KEY(user_id),
+  UNIQUE KEY(username),
+  UNIQUE KEY(email),
+  INDEX login(email, password),
+  INDEX (last_login),
+  INDEX (created_on)
+  ) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8;
+
+  CREATE TABLE riddles (
+  riddle_id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(20) NOT NULL,
+  criteria VARCHAR(200) NOT NULL,
+  riddle_type VARCHAR(20) NOT NULL,
+  PRIMARY KEY(riddle_id),
+  INDEX(riddle_type)
+  ) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8;
+
+  CREATE TABLE plays (
+  user_id INT(11) UNSIGNED NOT NULL,
+  riddle_id INT(11) UNSIGNED NOT NULL,
+  score INT(11) UNSIGNED DEFAULT NULL,
+  PRIMARY KEY(user_id, riddle_id),
+  CONSTRAINT user_id_fk FOREIGN KEY (user_id) REFERENCES users(user_id),
+  CONSTRAINT riddle_id_fk FOREIGN KEY (riddle_id) REFERENCES riddles(riddle_id)
+  ) ENGINE=InnoDB AUTO_INCREMENT=4080 DEFAULT CHARSET=utf8;
+
+</Asset>
+
+</XnaContent>
