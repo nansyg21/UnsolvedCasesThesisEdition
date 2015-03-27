@@ -88,6 +88,7 @@ namespace UnsolvedCases
             //LoadingScreen.Load(screenManager, true, new SingleplayerScreen());
             //LoadingScreen.Load(screenManager, true, new LoginScreen()); 
             //LoadingScreen.Load(screenManager, true, new PuzzleGameScreen()); 
+
             LoadingScreen.Load(screenManager, true, new MainMenuScreen());
             //LoadingScreen.Load(screenManager, true, new SelectSuspectScreen());
             //LoadingScreen.Load(screenManager, true, new MGStage8());
