@@ -78,8 +78,15 @@ namespace UnsolvedCases
 
             base.Initialize();
 
-            //LoadingScreen.Load(screenManager, true, new VideoManager("Intro", new LoginScreen()));
+            //All mini games here
             //LoadingScreen.Load(screenManager, true, new MemoryGameScreen());
+            //LoadingScreen.Load(screenManager, true, new MGStage1());
+            //LoadingScreen.Load(screenManager, true, new PlatformerLevel());
+            //LoadingScreen.Load(screenManager, true, new PuzzleGameScreen());
+            //LoadingScreen.Load(screenManager, true, new SuspectEscapeScreen());
+            //LoadingScreen.Load(screenManager, true, new BubbleMathScreen(true)); //true is for Drawpostit
+           // LoadingScreen.Load(screenManager, true, new ClickMeScreen());
+            
             //LoadingScreen.Load(screenManager, true, new ClickMeScreen());
             //LoadingScreen.Load(screenManager, true, new StageTest());
             //LoadingScreen.Load(screenManager, true, new SingleplayerScreen());
@@ -95,6 +102,7 @@ namespace UnsolvedCases
             //LoadingScreen.Load(screenManager, true, new PasswordLockScreen());
             //LoadingScreen.Load(screenManager, true, new PlatformerLevel());
             //LoadingScreen.Load(screenManager, true, new BubbleMathScreen(true));
+            //LoadingScreen.Load(screenManager, true, new VideoManager("Intro", new LoginScreen()));
         }
 
         #endregion

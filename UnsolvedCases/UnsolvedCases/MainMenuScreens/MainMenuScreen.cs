@@ -44,8 +44,8 @@ namespace UnsolvedCases
         Texture2D singleplayer;
         Rectangle singleplayerRectangle;
 
-        Texture2D multiplayer;
-        Rectangle multiplayerRectangle;
+        Texture2D allminigames;
+        Rectangle allminigamesRectangle;
 
         Texture2D settings;
         Rectangle settingsRectangle;
@@ -100,13 +100,13 @@ namespace UnsolvedCases
                 singleplayer.Width, 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
             selectedRectangle = singleplayerRectangle;
 
-            multiplayer = content.Load<Texture2D>(@"Textures\MainMenu\Multiplayer");
-            multiplayerRectangle = new Rectangle(singleplayerRectangle.X, singleplayerRectangle.Y + 
-                singleplayer.Height, multiplayer.Width,
+            allminigames = content.Load<Texture2D>(@"Textures\MainMenu\allminigames");
+            allminigamesRectangle = new Rectangle(singleplayerRectangle.X, singleplayerRectangle.Y + 
+                singleplayer.Height, allminigames.Width,
                 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
 
             settings = content.Load<Texture2D>(@"Textures\MainMenu\Settings");
-            settingsRectangle = new Rectangle(singleplayerRectangle.X, multiplayerRectangle.Y + multiplayer.Height, settings.Width,
+            settingsRectangle = new Rectangle(singleplayerRectangle.X, allminigamesRectangle.Y + allminigames.Height, settings.Width,
                 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
 
             credits = content.Load<Texture2D>(@"Textures\MainMenu\Credits");
@@ -150,7 +150,7 @@ namespace UnsolvedCases
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Down))
-                        selectedRectangle=multiplayerRectangle;
+                        selectedRectangle=allminigamesRectangle;
                 }
                 else if (current.IsKeyDown(Keys.Up))
                 {
@@ -160,7 +160,7 @@ namespace UnsolvedCases
                         selectedRectangle = quitRectangle;
                 }
             }
-            else if (selectedRectangle == multiplayerRectangle)
+            else if (selectedRectangle == allminigamesRectangle)
             {
                 if (current.IsKeyDown(Keys.Down))
                 {
@@ -191,7 +191,7 @@ namespace UnsolvedCases
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Up))
-                        selectedRectangle = multiplayerRectangle;
+                        selectedRectangle = allminigamesRectangle;
                 }
             }
             else if (selectedRectangle == creditsRectangle)
@@ -294,7 +294,7 @@ namespace UnsolvedCases
                 {
                     LoadingScreen.Load(ScreenManager, true, new SingleplayerScreen());
                 }
-                else if (selectedRectangle == multiplayerRectangle)
+                else if (selectedRectangle == allminigamesRectangle)
                 {
                     LoadingScreen.Load(ScreenManager, true, new MultiplayerScreen());
                 }
@@ -352,15 +352,15 @@ namespace UnsolvedCases
                 spriteBatch.Draw(singleplayer, singleplayerRectangle, Color.White);
             }
 
-            if (selectedRectangle == multiplayerRectangle)
+            if (selectedRectangle == allminigamesRectangle)
             {
-                Rectangle safeArea = multiplayerRectangle;
+                Rectangle safeArea = allminigamesRectangle;
                 Vector2 position = new Vector2(safeArea.X, safeArea.Y);
-                spriteBatch.Draw(multiplayer, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                spriteBatch.Draw(allminigames, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
             }
             else
             {
-                spriteBatch.Draw(multiplayer, multiplayerRectangle, Color.White);
+                spriteBatch.Draw(allminigames, allminigamesRectangle, Color.White);
             }
 
             if (selectedRectangle == settingsRectangle)

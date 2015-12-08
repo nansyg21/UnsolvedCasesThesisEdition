@@ -22,20 +22,26 @@ namespace UnsolvedCases
         Texture2D logo;
         Rectangle logoRectangle;
 
-        Texture2D singleplayer;
-        Rectangle singleplayerRectangle;
+        Texture2D MemoryGame;
+        Rectangle MemoryGameRectangle;
 
-        Texture2D multiplayer;
-        Rectangle multiplayerRectangle;
+        Texture2D MouseGame;
+        Rectangle MouseGameRectangle;
 
-        Texture2D settings;
-        Rectangle settingsRectangle;
+        Texture2D Platform;
+        Rectangle PlatformRectangle;
 
-        Texture2D credits;
-        Rectangle creditsRectangle;
+        Texture2D Puzzle;
+        Rectangle PuzzleRectangle;
 
-        Texture2D help;
-        Rectangle helpRectangle;
+        Texture2D SuspectEscape;
+        Rectangle SuspectEscapeRectangle;
+
+        Texture2D BubbleMath;
+        Rectangle BubbleMathRectangle;
+
+        Texture2D ClickMe;
+        Rectangle ClickMeRectangle;
 
         Texture2D quit;
         Rectangle quitRectangle;
@@ -45,7 +51,7 @@ namespace UnsolvedCases
         KeyboardState currentState;
         KeyboardState previousState;
 
-        Button backButton;
+       
 
         #endregion
 
@@ -70,36 +76,42 @@ namespace UnsolvedCases
             logoRectangle = new Rectangle(ScreenManager.GraphicsDevice.Viewport.Width / 2 - 150, 0,
                 ScreenManager.GraphicsDevice.Viewport.Width / 5, ScreenManager.GraphicsDevice.Viewport.Height / 5);
 
-            singleplayer = content.Load<Texture2D>(@"Textures\MainMenu\Singleplayer");
-            singleplayerRectangle = new Rectangle(ScreenManager.GraphicsDevice.Viewport.Width / 15, 
-                ScreenManager.GraphicsDevice.Viewport.Height / 3,
-                singleplayer.Width, 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
-            selectedRectangle = singleplayerRectangle;
+            MemoryGame = content.Load<Texture2D>(@"Textures\MiniGames\memorygame");
+            MemoryGameRectangle = new Rectangle(ScreenManager.GraphicsDevice.Viewport.Width / 15, 
+                ScreenManager.GraphicsDevice.Viewport.Height / 4,
+                MemoryGame.Width, 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
+            selectedRectangle = MemoryGameRectangle;
 
-            multiplayer = content.Load<Texture2D>(@"Textures\MainMenu\Multiplayer");
-            multiplayerRectangle = new Rectangle(singleplayerRectangle.X, singleplayerRectangle.Y + singleplayer.Height, 
-                multiplayer.Width,
+            MouseGame = content.Load<Texture2D>(@"Textures\MiniGames\mousegame");
+            MouseGameRectangle = new Rectangle(MemoryGameRectangle.X, MemoryGameRectangle.Y + MemoryGame.Height, 
+                MouseGame.Width,
                 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
 
-            settings = content.Load<Texture2D>(@"Textures\MainMenu\Settings");
-            settingsRectangle = new Rectangle(singleplayerRectangle.X, multiplayerRectangle.Y + multiplayer.Height, settings.Width,
+            Platform = content.Load<Texture2D>(@"Textures\MiniGames\platform");
+            PlatformRectangle = new Rectangle(MemoryGameRectangle.X, MouseGameRectangle.Y + MouseGame.Height, Platform.Width,
                 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
 
-            credits = content.Load<Texture2D>(@"Textures\MainMenu\Credits");
-            creditsRectangle = new Rectangle(singleplayerRectangle.X, settingsRectangle.Y + settings.Height, credits.Width,
+            Puzzle = content.Load<Texture2D>(@"Textures\MiniGames\puzzle");
+            PuzzleRectangle = new Rectangle(MemoryGameRectangle.X, PlatformRectangle.Y + Platform.Height, Puzzle.Width,
                 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
 
-            help = content.Load<Texture2D>(@"Textures\MainMenu\Help");
-            helpRectangle = new Rectangle(singleplayerRectangle.X, creditsRectangle.Y + credits.Height, help.Width,
+            SuspectEscape = content.Load<Texture2D>(@"Textures\MiniGames\suspectescape");
+            SuspectEscapeRectangle = new Rectangle(MemoryGameRectangle.X, PuzzleRectangle.Y + Puzzle.Height, SuspectEscape.Width,
+                2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
+
+            BubbleMath = content.Load<Texture2D>(@"Textures\MiniGames\bubblemath");
+            BubbleMathRectangle = new Rectangle(MemoryGameRectangle.X+MemoryGameRectangle.Width+100, MouseGameRectangle.Y, BubbleMath.Width,
+                2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
+
+            ClickMe = content.Load<Texture2D>(@"Textures\MiniGames\clickme");
+            ClickMeRectangle = new Rectangle(MemoryGameRectangle.X + MemoryGameRectangle.Width + 100, PlatformRectangle.Y, ClickMe.Width,
                 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
 
             quit = content.Load<Texture2D>(@"Textures\MainMenu\Quit");
-            quitRectangle = new Rectangle(singleplayerRectangle.X, helpRectangle.Y + help.Height, quit.Width,
+            quitRectangle = new Rectangle(ScreenManager.GraphicsDevice.Viewport.Width/2-quit.Width/2, SuspectEscapeRectangle.Y + SuspectEscape.Height, quit.Width,
                 2 * (ScreenManager.GraphicsDevice.Viewport.Height / 20));
 
-            backButton = new Button(content, "Button");
-            backButton.buttonPosition = new Vector2(0, ScreenManager.GraphicsDevice.Viewport.Height - 40);
-            backButton.Text = "BACK";
+           
         }
 
         #endregion
@@ -114,14 +126,14 @@ namespace UnsolvedCases
         /// <returns></returns>
         public Rectangle KeybordSelection(KeyboardState current, KeyboardState previous)
         {
-            if (selectedRectangle == singleplayerRectangle)
+            if (selectedRectangle == MemoryGameRectangle)
             {
                 if (current.IsKeyDown(Keys.Down))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Down))
-                        selectedRectangle = multiplayerRectangle;
+                        selectedRectangle = MouseGameRectangle;
                 }
                 else if (current.IsKeyDown(Keys.Up))
                 {
@@ -131,58 +143,92 @@ namespace UnsolvedCases
                         selectedRectangle = quitRectangle;
                 }
             }
-            else if (selectedRectangle == multiplayerRectangle)
+            else if (selectedRectangle == MouseGameRectangle)
             {
                 if (current.IsKeyDown(Keys.Down))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Down))
-                        selectedRectangle = settingsRectangle;
+                        selectedRectangle = PlatformRectangle;
                 }
                 else if (current.IsKeyDown(Keys.Up))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Up))
-                        selectedRectangle = singleplayerRectangle;
+                        selectedRectangle = MemoryGameRectangle;
                 }
             }
-            else if (selectedRectangle == settingsRectangle)
+            else if (selectedRectangle == PlatformRectangle)
             {
                 if (current.IsKeyDown(Keys.Down))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Down))
-                        selectedRectangle = creditsRectangle;
+                        selectedRectangle = PuzzleRectangle;
                 }
                 else if (current.IsKeyDown(Keys.Up))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Up))
-                        selectedRectangle = multiplayerRectangle;
+                        selectedRectangle = MouseGameRectangle;
                 }
             }
-            else if (selectedRectangle == creditsRectangle)
+            else if (selectedRectangle == PuzzleRectangle)
             {
                 if (current.IsKeyDown(Keys.Down))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Down))
-                        selectedRectangle = helpRectangle;
+                        selectedRectangle = SuspectEscapeRectangle;
                 }
                 else if (current.IsKeyDown(Keys.Up))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Up))
-                        selectedRectangle = settingsRectangle;
+                        selectedRectangle = PlatformRectangle;
                 }
             }
-            else if (selectedRectangle == helpRectangle)
+            else if (selectedRectangle == SuspectEscapeRectangle)
+            {
+                if (current.IsKeyDown(Keys.Down))
+                {
+                    AudioManager.PlayCue("MenuMove");
+
+                    if (!previous.IsKeyDown(Keys.Down))
+                        selectedRectangle = BubbleMathRectangle;
+                }
+                else if (current.IsKeyDown(Keys.Up))
+                {
+                    AudioManager.PlayCue("MenuMove");
+
+                    if (!previous.IsKeyDown(Keys.Up))
+                        selectedRectangle = PuzzleRectangle;
+                }
+            }
+            else if (selectedRectangle == BubbleMathRectangle)
+            {
+                if (current.IsKeyDown(Keys.Down))
+                {
+                    AudioManager.PlayCue("MenuMove");
+
+                    if (!previous.IsKeyDown(Keys.Down))
+                        selectedRectangle = ClickMeRectangle;
+                }
+                else if (current.IsKeyDown(Keys.Up))
+                {
+                    AudioManager.PlayCue("MenuMove");
+
+                    if (!previous.IsKeyDown(Keys.Up))
+                        selectedRectangle = SuspectEscapeRectangle;
+                }
+            }
+            else if (selectedRectangle == ClickMeRectangle)
             {
                 if (current.IsKeyDown(Keys.Down))
                 {
@@ -196,7 +242,7 @@ namespace UnsolvedCases
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Up))
-                        selectedRectangle = creditsRectangle;
+                        selectedRectangle = BubbleMathRectangle;
                 }
             }
             else if (selectedRectangle == quitRectangle)
@@ -206,14 +252,14 @@ namespace UnsolvedCases
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Down))
-                        selectedRectangle = singleplayerRectangle;
+                        selectedRectangle = MemoryGameRectangle;
                 }
                 else if (current.IsKeyDown(Keys.Up))
                 {
                     AudioManager.PlayCue("MenuMove");
 
                     if (!previous.IsKeyDown(Keys.Up))
-                        selectedRectangle = helpRectangle;
+                        selectedRectangle = SuspectEscapeRectangle;
                 }
             }
 
@@ -232,7 +278,7 @@ namespace UnsolvedCases
             KeybordSelection(currentState, previousState);
             previousState = currentState;
 
-            backButton.PressedButtonIllusion(mouse);
+         
         }
 
         public override void HandleInput()
@@ -241,37 +287,41 @@ namespace UnsolvedCases
 
             if (keyboardState.IsKeyDown(Keys.Enter))
             {
-                if (selectedRectangle == singleplayerRectangle)
+                if (selectedRectangle == MemoryGameRectangle)
                 {
                     LoadingScreen.Load(ScreenManager, true, new MemoryGameScreen());
                 }
-                else if (selectedRectangle == multiplayerRectangle)
+                else if (selectedRectangle == MouseGameRectangle)
                 {
                     LoadingScreen.Load(ScreenManager, true, new MGStage1());
                 }
-                else if (selectedRectangle == settingsRectangle)
+                else if (selectedRectangle == PlatformRectangle)
+                {
+                    LoadingScreen.Load(ScreenManager, true, new PlatformerLevel());
+                }
+                else if (selectedRectangle == PuzzleRectangle)
                 {
                     LoadingScreen.Load(ScreenManager, true, new PuzzleGameScreen());
                 }
-                else if (selectedRectangle == helpRectangle)
-                {
-                    LoadingScreen.Load(ScreenManager, true, new ClickMeScreen());
-                }
-                else if (selectedRectangle == creditsRectangle)
+                else if (selectedRectangle == SuspectEscapeRectangle)
                 {
                     LoadingScreen.Load(ScreenManager, true, new SuspectEscapeScreen());
                 }
+                else if (selectedRectangle == BubbleMathRectangle)
+                {
+                    LoadingScreen.Load(ScreenManager, true, new BubbleMathScreen(true));
+                }
+                else if (selectedRectangle == ClickMeRectangle)
+                {
+                    LoadingScreen.Load(ScreenManager, true, new ClickMeScreen());
+                }
                 else if (selectedRectangle == quitRectangle)
                 {
-                    LoadingScreen.Load(ScreenManager, true, new SelectSuspectScreen());
+                    LoadingScreen.Load(ScreenManager, true, new MainMenuScreen());
                 }
             }
 
-            if (backButton.ButtonPressed)
-            {
-                AudioManager.PlayCue("Continue");
-                LoadingScreen.Load(ScreenManager, false, null, new MainMenuScreen());
-            }
+        
         }
 
         #endregion
@@ -296,61 +346,82 @@ namespace UnsolvedCases
             spriteBatch.Draw(background, new Rectangle(0, 0, ScreenManager.GraphicsDevice.Viewport.Width, 
                 ScreenManager.GraphicsDevice.Viewport.Height), Color.White);
             spriteBatch.Draw(logo, logoRectangle, Color.White);
-            backButton.Draw(this, gameTime);
+           // backButton.Draw(this, gameTime);
             //check if the menu entry is selected if so make it scale else just draw it in its place
-            if (selectedRectangle == singleplayerRectangle)
+            if (selectedRectangle == MemoryGameRectangle)
             {
-                Rectangle safeArea = singleplayerRectangle;
+                Rectangle safeArea = MemoryGameRectangle;
                 Vector2 position = new Vector2(safeArea.X, safeArea.Y);
-                spriteBatch.Draw(singleplayer, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                spriteBatch.Draw(MemoryGame, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
             }
             else
             {
-                spriteBatch.Draw(singleplayer, singleplayerRectangle, Color.White);
+                spriteBatch.Draw(MemoryGame, MemoryGameRectangle, Color.White);
             }
 
-            if (selectedRectangle == multiplayerRectangle)
+            if (selectedRectangle == MouseGameRectangle)
             {
-                Rectangle safeArea = multiplayerRectangle;
+                Rectangle safeArea = MouseGameRectangle;
                 Vector2 position = new Vector2(safeArea.X, safeArea.Y);
-                spriteBatch.Draw(multiplayer, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                spriteBatch.Draw(MouseGame, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
             }
             else
             {
-                spriteBatch.Draw(multiplayer, multiplayerRectangle, Color.White);
+                spriteBatch.Draw(MouseGame, MouseGameRectangle, Color.White);
             }
 
-            if (selectedRectangle == settingsRectangle)
+            if (selectedRectangle == PlatformRectangle)
             {
-                Rectangle safeArea = settingsRectangle;
+                Rectangle safeArea = PlatformRectangle;
                 Vector2 position = new Vector2(safeArea.X, safeArea.Y);
-                spriteBatch.Draw(settings, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                spriteBatch.Draw(Platform, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
             }
             else
             {
-                spriteBatch.Draw(settings, settingsRectangle, Color.White);
+                spriteBatch.Draw(Platform, PlatformRectangle, Color.White);
             }
 
-            if (selectedRectangle == creditsRectangle)
+            if (selectedRectangle == PuzzleRectangle)
             {
-                Rectangle safeArea = creditsRectangle;
+                Rectangle safeArea = PuzzleRectangle;
                 Vector2 position = new Vector2(safeArea.X, safeArea.Y);
-                spriteBatch.Draw(credits, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                spriteBatch.Draw(Puzzle, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
             }
             else
             {
-                spriteBatch.Draw(credits, creditsRectangle, Color.White);
+                spriteBatch.Draw(Puzzle, PuzzleRectangle, Color.White);
             }
 
-            if (selectedRectangle == helpRectangle)
+            if (selectedRectangle == SuspectEscapeRectangle)
             {
-                Rectangle safeArea = helpRectangle;
+                Rectangle safeArea = SuspectEscapeRectangle;
                 Vector2 position = new Vector2(safeArea.X, safeArea.Y);
-                spriteBatch.Draw(help, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                spriteBatch.Draw(SuspectEscape, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
             }
             else
             {
-                spriteBatch.Draw(help, helpRectangle, Color.White);
+                spriteBatch.Draw(SuspectEscape, SuspectEscapeRectangle, Color.White);
+            }
+
+            if (selectedRectangle == BubbleMathRectangle)
+            {
+                Rectangle safeArea = BubbleMathRectangle;
+                Vector2 position = new Vector2(safeArea.X, safeArea.Y);
+                spriteBatch.Draw(BubbleMath, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            }
+            else
+            {
+                spriteBatch.Draw(BubbleMath, BubbleMathRectangle, Color.White);
+            }
+            if (selectedRectangle == ClickMeRectangle)
+            {
+                Rectangle safeArea = ClickMeRectangle;
+                Vector2 position = new Vector2(safeArea.X, safeArea.Y);
+                spriteBatch.Draw(ClickMe, position, null, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            }
+            else
+            {
+                spriteBatch.Draw(ClickMe, ClickMeRectangle, Color.White);
             }
 
             if (selectedRectangle == quitRectangle)
