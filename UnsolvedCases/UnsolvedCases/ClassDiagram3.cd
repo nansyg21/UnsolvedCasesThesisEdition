@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UnsolvedCases.AudioManager" Collapsed="true">
+    <Position X="81.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAACAEAQBAAAAAAEUAAACIAAAAAAQAAiBAAAA=</HashCode>
+      <FileName>AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Victor" Collapsed="true">
+    <Position X="81.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAQAASIAIgKgCCQEAAgBYBAAAAAABIaAgSIAAI0=</HashCode>
+      <FileName>Characters\Victor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Fonts" Collapsed="true">
+    <Position X="88.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEEAAAgAgAEoAAABIgAAAQIAAAAAAAAAFAAgAAAQ=</HashCode>
+      <FileName>Fonts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.InputManager" Collapsed="true">
+    <Position X="81.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAIEAgAAAAARAAIAgAAEAAABAACAAAACAAAAQAQBA=</HashCode>
+      <FileName>InputManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.LoginScreen" Collapsed="true">
+    <Position X="36.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUCAGSAASmAAgAIIAABAGNBAAAIAAAAAAABAgRCIAQ=</HashCode>
+      <FileName>LoginScreens\LoginScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.RegisterScreen" Collapsed="true">
+    <Position X="50" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUCAGSEASmAAiIoMAABAGNBAAAIRAAAIAAAAgVAIAQ=</HashCode>
+      <FileName>LoginScreens\RegisterScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.CreditsScreen" Collapsed="true">
+    <Position X="63.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQEQACAIAUWAgAIAAYAIDgBAQAQAAAAAAgAAQAgIAQ=</HashCode>
+      <FileName>MainMenuScreens\CreditsScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.HelpScreen" Collapsed="true">
+    <Position X="72.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SA0CEACAAAFAGgAAAQQAQGAAEQAAAAAAAwABQBFIYAw=</HashCode>
+      <FileName>MainMenuScreens\HelpScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MainMenuScreen" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQCEEiAhAEYAgAIIASAACwAAACIEAACBAABCYUAIAQ=</HashCode>
+      <FileName>MainMenuScreens\MainMenuScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MultiplayerScreen" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQACACABAEYEoAAICCQACAAAAAIIkAACAAFAACAIAY=</HashCode>
+      <FileName>MainMenuScreens\MultiplayerScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.SettingsScreen" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAEAAgAAAAAAACAAAQAAAAAAAAAAAAAAIAQ=</HashCode>
+      <FileName>MainMenuScreens\SettingsScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.SingleplayerScreen" Collapsed="true">
+    <Position X="27.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBUKAACEAAEIIgAAAAAAACCBAYAAAAAAAAAAJBBAIAU=</HashCode>
+      <FileName>MainMenuScreens\SingleplayerScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.BubbleMathScreen" Collapsed="true">
+    <Position X="38.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CFQCFMBAMAqAQgAAKkAAAlRAQAEKQCTUEgQBMAAAIwQ=</HashCode>
+      <FileName>RiddlesScreens\BubbleMathScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.ClickMeScreen" Collapsed="true">
+    <Position X="52.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQZGmMkAABAEQiAAMAAAAEBAAAIAIAAEIAAwEASAAQQ=</HashCode>
+      <FileName>RiddlesScreens\ClickMeScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MemoryGameScreen" Collapsed="true">
+    <Position X="65.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQCEEAAgAAAAmQAYAAAACAAGAAIAAQEAEgCAAQAIAc=</HashCode>
+      <FileName>RiddlesScreens\MemoryGame\MemoryGameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.QuestionScreen" Collapsed="true">
+    <Position X="74.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAAAAAgAIAAAAAAAAAAQAAAAAAAAAAAAAAAY=</HashCode>
+      <FileName>RiddlesScreens\MemoryGame\QuestionScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage1" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUSEEAhAAACCgQQQAAAQCAEAAEIACAEgFAAAAAAASQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage10" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQaMECgAAAACgQAQwBgAAAEMED4AiAEAEEAAAAAARQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage10.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage11" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSEEAgAAAACgQAQAQAAAgAAAEAADAAAAAAAAAFAQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage11.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage12" Collapsed="true">
+    <Position X="29.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UQQSkEAgAAAACgQAQAAAAAgUAABACCAEAOAAAAABAAw=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage12.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage13" Collapsed="true">
+    <Position X="41" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSEEAgAAAACoQAQAAAIAAEABAABCAEAAMAAAAEAQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage13.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage2" Collapsed="true">
+    <Position X="54.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQSEEAgAAAACgAAIAAAAAAEAAAAACAEAAAAAAABAQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage3" Collapsed="true">
+    <Position X="68" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQSsMApAAAACywAQQBQAAIEAAAAADQEEEAAoIVBEAQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage3.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage4" Collapsed="true">
+    <Position X="77" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAwSEMAwAAAACgQAQAAgAAAEACAQACEEAAAAAABAAQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage4.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage5" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQSEEAoAAAAygQAQAAQABAEAADEACAEAAAAAAAAEQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage5.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage6" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSEUAgAAAACgQAQAAAAAAAAAAAACAEAAAAAAAAAAQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage6.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage7" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSEEAgIAAACgQAQAAAAAAEAAAAACAEAAAAAAAAAQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage7.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage8" Collapsed="true">
+    <Position X="32" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSEEBgQAAACgQAQAAIAAAMAAKAACAEAAAAgAAAAQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage8.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MGStage9">
+    <Position X="43.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQSUEBgAAAACgQAQAAIAAAMAACAACAEAAAAAAAAAQQ=</HashCode>
+      <FileName>RiddlesScreens\MouseGame\MGStage9.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.PasswordLockScreen" Collapsed="true">
+    <Position X="56.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgQCCASAAAAAAkAIIAAAAEABAAQAAEAAAIAAAgAAIQQ=</HashCode>
+      <FileName>RiddlesScreens\PasswordLockScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Character" Collapsed="true">
+    <Position X="85.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABSQAA0QASIhIgIsJCwEAIgEQCQgAAEoCsKggQoAgAQ=</HashCode>
+      <FileName>RiddlesScreens\PlatformerGame\Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.PaintingPlatform" Collapsed="true">
+    <Position X="87" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAASAAAwAgAAAAAAAAAAAhAAAAAYAAgAAAAAQ=</HashCode>
+      <FileName>RiddlesScreens\PlatformerGame\PaintingPlatform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Platform" Collapsed="true">
+    <Position X="88.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQEAgIUASAABwAoAAwACDiQggChAAAIAYECgAAAAAQ=</HashCode>
+      <FileName>RiddlesScreens\PlatformerGame\Platform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.PlatformerLevel" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cAUGAEmQABBAsgAAAAgQARDCEAUAAEAEAoChSAqMNAU=</HashCode>
+      <FileName>RiddlesScreens\PlatformerGame\PlatformerLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.PlatformItems" Collapsed="true">
+    <Position X="81.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAASAAA4AgAAAAAAAAAgAhAAAAEYAAgAgAAAQ=</HashCode>
+      <FileName>RiddlesScreens\PlatformerGame\PlatformItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Puzzle" Collapsed="true">
+    <Position X="34.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RBgA4AYAAABBAgQASAAAGBggHLAAaSjaIQhG8B7zBQ8=</HashCode>
+      <FileName>RiddlesScreens\PuzzleScreen\Puzzle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.PuzzleGameScreen" Collapsed="true">
+    <Position X="45.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EA0SGogIAwhIImBIAEAYBAAgQAAAgCAEAFgAAMAIMQw=</HashCode>
+      <FileName>RiddlesScreens\PuzzleScreen\PuzzleGameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.SelectSuspectScreen" Collapsed="true">
+    <Position X="59" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAACAAAAAAgAAAAoAAAAAAQAAAAAEACAAAAAAIAQ=</HashCode>
+      <FileName>RiddlesScreens\SelectSuspectScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.SuspectEscapeScreen" Collapsed="true">
+    <Position X="70.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERSXEBiEiQKCkQQQ0BoAIAkQAAyABAkIgECIEABJCw=</HashCode>
+      <FileName>RiddlesScreens\SuspectEscape\SuspectEscapeScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.GameScreen" Collapsed="true">
+    <Position X="40" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAEACAAARAAgAEEAIAAAAADAAAAg4AAgAGAEYIBAQ=</HashCode>
+      <FileName>ScreenManager\GameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.LoadingScreen" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABRAgAAAAAAAAgAAAAAQAAEAAEAAAAABAAAAAgAAAAQ=</HashCode>
+      <FileName>ScreenManager\LoadingScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.MessageBoxScreen" Collapsed="true">
+    <Position X="25.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUCAACAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAADQ=</HashCode>
+      <FileName>ScreenManager\MessageBoxScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.ScreenManager" Collapsed="true">
+    <Position X="88.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAVEAgAAAjAwEAAACgIAAAgAAAiAAERAAUoAMADEQ=</HashCode>
+      <FileName>ScreenManager\ScreenManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.StageFloor" Collapsed="true">
+    <Position X="81.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAEAACCAAAgAAAAAAAAAAAAQAAAAAAAACAAAAAgA=</HashCode>
+      <FileName>StagesScreens\StageFloor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.StageTest" Collapsed="true">
+    <Position X="61.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYCFEAAAAAAAgAAAAEAAAAAAAQAAAgEAAAAAAAAYAQ=</HashCode>
+      <FileName>StagesScreens\StageTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Button" Collapsed="true">
+    <Position X="83.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCAEAABAgACoAoAAAAQEAAAAAEAAAIAAABCEAAQAA=</HashCode>
+      <FileName>Toolbox\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.ComicDisplay" Collapsed="true">
+    <Position X="79.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQCAICAAACAgiAYAARAAAgAAAAAAEAAAAARAQCAIAQ=</HashCode>
+      <FileName>Toolbox\ComicDisplay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Label" Collapsed="true">
+    <Position X="83.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAABAAAAAAgAgAAAAIABAAAAAAACIAAAAiEAAAAA=</HashCode>
+      <FileName>Toolbox\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Rotations" Collapsed="true">
+    <Position X="87" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Toolbox\Rotations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Textfield" Collapsed="true">
+    <Position X="87" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAYCAAAAAAAAAgghAAAAIABAAABAACCIAAAACEAAQIA=</HashCode>
+      <FileName>Toolbox\Textfield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.UnsolvedCasesGame" Collapsed="true">
+    <Position X="88.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAEAAAAAAAAwAAAAAAAAAAAAAAAAgAAAAABEAAAAQ=</HashCode>
+      <FileName>UnsolvedCasesGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.VideoManager" Collapsed="true">
+    <Position X="47.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAgACAAggAAAAAAAAAAAAAEAAABAAAACAAAAAQ=</HashCode>
+      <FileName>VideoManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PuzzlePiece" Collapsed="true">
+    <Position X="85.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAEgQAQACAIAAEAAEAAACCAAAAABAAAAg=</HashCode>
+      <FileName>RiddlesScreens\PuzzleScreen\PuzzlePiece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateObjects" Collapsed="true">
+    <Position X="83.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAICAAAAAgAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RiddlesScreens\PuzzleScreen\StateObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StencilPiece" Collapsed="true">
+    <Position X="85.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgQAQAAAIAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>RiddlesScreens\PuzzleScreen\StencilPiece.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="XNA2DCollisionDetection.CollisionDetection2D" Collapsed="true">
+    <Position X="87" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgAAAAAAgAAAAAAACAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>Toolbox\CollisionDetection2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Tools.MouseCursor" Collapsed="true">
+    <Position X="85.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAFAAACAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Toolbox\MouseCursor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnsolvedCases.Toolbox.PostIt" Collapsed="true">
+    <Position X="83.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACCEAABAAACgAgAAAAAEAAAAQAAAAIAAAACEEAQQA=</HashCode>
+      <FileName>Toolbox\PostIt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="UnsolvedCases.ScreenState" Collapsed="true">
+    <Position X="81.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAgAAAIAAAEAAA=</HashCode>
+      <FileName>ScreenManager\GameScreen.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
